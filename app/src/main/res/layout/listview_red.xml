@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="240dp"
     android:background="@color/colorRed">
 
-    <include layout="@layout/listview_orage" />
+    <include layout="@layout/listview_orage"
+        android:id="@+id/include" />
 
-</LinearLayout>
+
+
+</RelativeLayout>
