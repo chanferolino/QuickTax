@@ -25,7 +25,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:id="@+id/textView" />
+        android:id="@+id/cat" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:enabled="false"
         android:layout_margin="10dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/cat"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"

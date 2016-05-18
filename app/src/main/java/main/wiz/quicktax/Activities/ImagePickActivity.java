@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.InputStream;
 
+import main.wiz.quicktax.MainActivity;
 import main.wiz.quicktax.R;
 
 public class ImagePickActivity extends Activity {
@@ -24,6 +26,7 @@ public class ImagePickActivity extends Activity {
     private Button btnGallerypicture;
     static final int REQUEST_IMAGE_CAPTURE = 2;
     private EditText edtCategory;
+    private TextView cat;
     private String Category;
 
     @Override
@@ -34,12 +37,20 @@ public class ImagePickActivity extends Activity {
         btnTakepicture=(Button)findViewById(R.id.captureActual);
         btnGallerypicture=(Button)findViewById(R.id.captureFront);
         edtCategory=(EditText)findViewById(R.id.edtCategory);
+        cat=(TextView)findViewById(R.id.cat);
 
 
-        Intent intent= getIntent();
+        final Intent intent= getIntent();
         Category=intent.getStringExtra("KEY_CATEGORY");
         edtCategory.setText(Category+"");
 
+        cat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1= new Intent(ImagePickActivity.this, MainActivity.class);
+                startActivity(intent1);
+            }
+        });
 
     }
 
@@ -86,6 +97,7 @@ public class ImagePickActivity extends Activity {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
+
 
 
 
