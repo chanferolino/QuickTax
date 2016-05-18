@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class ImagePickActivity extends Activity {
     private Button btnTakepicture;
     private Button btnGallerypicture;
     static final int REQUEST_IMAGE_CAPTURE = 2;
+    private EditText edtCategory;
+    private String Category;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,14 @@ public class ImagePickActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.result);
         btnTakepicture=(Button)findViewById(R.id.captureActual);
         btnGallerypicture=(Button)findViewById(R.id.captureFront);
+        edtCategory=(EditText)findViewById(R.id.edtCategory);
+
+
+        Intent intent= getIntent();
+        Category=intent.getStringExtra("KEY_CATEGORY");
+        edtCategory.setText(Category+"");
+
+
     }
 
     public void onClick(View View) {

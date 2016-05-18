@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:background="@color/colorThree">
+
+    <include layout="@layout/category_toolbar_two"
+        android:id="@+id/include2" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iconPayments"
+        android:src="@drawable/payment"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/txtPayments"
+        android:layout_toStartOf="@+id/txtPayments" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Payments"
+        android:id="@+id/txtPayments"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_alignBottom="@+id/iconPayments"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>
